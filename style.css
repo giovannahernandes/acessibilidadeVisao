@@ -163,13 +163,13 @@ p {
 
 .card h3 {
   margin-bottom: 12px;
-  color: var(--primary-color);
+  color: pink;
   font-size: 1.3rem;
 }
 
 /* Referências Bibliográficas */
 .references {
-  background-color: var(--card-bg);
+  background-color: pink;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
@@ -192,7 +192,7 @@ p {
 /* Rodapé do Site */
 .site-footer {
   text-align: center;
-  background-color: var(--card-bg);
+  background-color: pink;
   border-top: 2px solid var(--border-color);
   margin-top: 40px;
   padding: 20px 0;
