@@ -1,24 +1,22 @@
+/* --- CONFIGURAÇÕES BASE & ACESSIBILIDADE --- */
 :root {
-  --bg-color: #fff0f5;          /* Rosa muito claro / LavenderBlush */
-  --text-color: #2b0c1b;        /* Vinho escuro para alto contraste e fácil leitura */
-  --primary-color: #9d174d;     /* Rosa escuro / Magenta elegante para destaques e títulos */
-  --primary-hover: #be185d;     /* Rosa médio para interações */
-  --card-bg: #ffffff;           /* Branco puro para os cards */
-  --border-color: #f472b6;       /* Rosa suave para bordas */
-  --accent-light: #fbcfe8;       /* Rosa claro para detalhes */
-  --focus-ring: #9d174d;        /* Cor do anel de foco acessível */
+  --bg-color: #EE82EE;
+  --text-color: #1a1a1a;
+  --primary-color: #FF1493;
+  --card-bg: #ffffff;
+  --border-color: #cccccc;
+  --focus-ring: #DDA0DD;
   --font-scale: 1rem;
 }
 
-/* Modo Alto Contraste (Acessibilidade extra) */
+/* Modo Alto Contraste */
 body.high-contrast {
   --bg-color: #000000;
   --text-color: #ffffff;
-  --primary-color: #ff66cc;     /* Rosa choque brilhante para alto contraste no escuro */
-  --primary-hover: #ff99dd;
+  --primary-color: #EE82EE;
   --card-bg: #121212;
   --border-color: #ffffff;
-  --focus-ring: #00ffff;
+  --focus-ring: #FF1493;
 }
 
 * {
@@ -34,12 +32,12 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif; /* Fonte sem serifa de fácil leitura */
   line-height: 1.7; /* Espaçamento de linha recomendado para acessibilidade */
-  background-color: pink;
+  background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Indicador de foco visível via teclado (WCAG 2.4.7) */
+/* Indicador do foco visível via teclado (WCAG 2.4.7) */
 *:focus {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
@@ -50,32 +48,28 @@ body {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--primary-color);
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   padding: 8px 16px;
   z-index: 100;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 0 0 4px 0;
 }
 
 .skip-link:focus {
   top: 0;
 }
 
-/* Layout Container */
+/* Layout */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Cabeçalho e Barra de Acessibilidade */
+/* Header e Barra de Acessibilidade */
 header {
   background-color: var(--card-bg);
-  border-bottom: 3px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   padding: 15px 0;
-  box-shadow: 0 2px 8px rgba(157, 23, 77, 0.08);
 }
 
 .header-container {
@@ -86,100 +80,75 @@ header {
   gap: 15px;
 }
 
-header h1 {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-}
-
 .accessibility-toolbar {
   display: flex;
   gap: 10px;
 }
 
-/* Botões da barra de acessibilidade */
 .btn-acc {
   background-color: var(--primary-color);
-  color: #ffffff;
-  border: 1px solid var(--primary-color);
+  color: var(--bg-color);
+  border: 1px solid var(--border-color);
   padding: 8px 14px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.2s;
+  border-radius: 4px;
 }
 
 .btn-acc:hover {
-  background-color: var(--primary-hover);
+  opacity: 0.9;
 }
 
-/* Artigo e Textos */
+/* Conteúdo */
 .article-header {
   margin-bottom: 30px;
-  border-bottom: 2px dashed var(--border-color);
-  padding-bottom: 20px;
-  margin-top: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
 }
 
 .article-title {
   color: var(--primary-color);
   margin-top: 15px;
-  font-size: 2.2rem;
-  line-height: 1.3;
+  font-size: 2rem;
 }
 
 .meta-info {
   font-size: 1rem;
   margin-bottom: 5px;
-  color: var(--text-color);
 }
 
 h2 {
   color: var(--primary-color);
-  margin: 35px 0 18px 0;
-  font-size: 1.6rem;
+  margin: 30px 0 15px 0;
+  font-size: 1.5rem;
 }
 
 p {
   margin-bottom: 1.2rem;
-  font-size: 1.05rem;
 }
 
-/* Cards das Espécies de Animais */
+/* Cards dos Animais */
 .species-guide {
   margin: 30px 0;
 }
 
 .card {
   background-color: var(--card-bg);
-  border-left: 6px solid var(--primary-color);
+  border-left: 5px solid var(--primary-color);
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 22px;
-  margin-bottom: 22px;
-  border-radius: 0 8px 8px 0;
-  box-shadow: 0 3px 10px rgba(157, 23, 77, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 0 4px 4px 0;
 }
 
 .card h3 {
-  margin-bottom: 12px;
-  color: pink;
-  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
-/* Referências Bibliográficas */
-.references {
-  background-color: pink;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  margin-top: 30px;
-}
-
-.references h2 {
-  margin-top: 0;
-}
-
+/* Referências */
 .references ul {
   list-style-type: square;
   padding-left: 20px;
@@ -189,13 +158,10 @@ p {
   margin-bottom: 10px;
 }
 
-/* Rodapé do Site */
 .site-footer {
   text-align: center;
-  background-color: pink;
-  border-top: 2px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
   margin-top: 40px;
   padding: 20px 0;
-  font-size: 0.95rem;
-  color: var(--text-color);
+  font-size: 0.9rem;
 }
