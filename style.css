@@ -1,167 +1,115 @@
-/* --- CONFIGURAÇÕES BASE & ACESSIBILIDADE --- */
+/* --- CONFIGURAÇÕES BASE E ACESSIBILIDADE --- */
 :root {
-  --bg-color: #EE82EE;
+  --bg-color: #f4f6f9;
   --text-color: #1a1a1a;
-  --primary-color: #FF1493;
+  --primary-color: #0d47a1;
   --card-bg: #ffffff;
-  --border-color: #cccccc;
-  --focus-ring: #DDA0DD;
-  --font-scale: 1rem;
-}
-
-/* Modo Alto Contraste */
-body.high-contrast {
-  --bg-color: #000000;
-  --text-color: #ffffff;
-  --primary-color: #EE82EE;
-  --card-bg: #121212;
-  --border-color: #ffffff;
-  --focus-ring: #FF1493;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: var(--font-scale);
+  --border-color: #d1d5db;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Fonte sem serifa de fácil leitura */
-  line-height: 1.7; /* Espaçamento de linha recomendado para acessibilidade */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte sem serifa para melhor leitura */
+  line-height: 1.6;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
 }
 
-/* Indicador do foco visível via teclado (WCAG 2.4.7) */
-*:focus {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+  --bg-color: #000000;
+  --text-color: #ffff00; /* Amarelo no preto para alto contraste */
+  --primary-color: #00ffff;
+  --card-bg: #121212;
+  --border-color: #ffff00;
 }
 
-/* Link para saltar navegação */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
-}
-
-.skip-link:focus {
+/* --- BARRA DE ACESSIBILIDADE --- */
+.accessibility-bar {
+  background-color: #222;
+  padding: 10px;
+  text-align: right;
+  position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
-/* Layout */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header e Barra de Acessibilidade */
-header {
-  background-color: var(--card-bg);
-  border-bottom: 2px solid var(--border-color);
-  padding: 15px 0;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.accessibility-toolbar {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-acc {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  border: 1px solid var(--border-color);
-  padding: 8px 14px;
+.accessibility-bar button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  padding: 8px 12px;
+  margin-left: 5px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
 }
 
-.btn-acc:hover {
-  opacity: 0.9;
+.accessibility-bar button:focus,
+.accessibility-bar button:hover {
+  outline: 3px solid #ffbf00;
+  background-color: #e0e0e0;
 }
 
-/* Conteúdo */
-.article-header {
-  margin-bottom: 30px;
-  border-bottom: 1px solid var(--border-color);
+/* --- ESTRUTURA PRINCIPAL --- */
+header, main, footer {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+header {
+  border-bottom: 3px solid var(--primary-color);
   padding-bottom: 15px;
 }
 
-.article-title {
+h1 {
   color: var(--primary-color);
-  margin-top: 15px;
   font-size: 2rem;
-}
-
-.meta-info {
-  font-size: 1rem;
-  margin-bottom: 5px;
 }
 
 h2 {
   color: var(--primary-color);
-  margin: 30px 0 15px 0;
   font-size: 1.5rem;
+  margin-top: 25px;
 }
 
-p {
-  margin-bottom: 1.2rem;
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-/* Cards dos Animais */
-.species-guide {
-  margin: 30px 0;
+.authors, .context {
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
+/* --- CARDS INFORMATIVOS --- */
 .card {
   background-color: var(--card-bg);
-  border-left: 5px solid var(--primary-color);
-  border-top: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 0 4px 4px 0;
+  border: 2px solid var(--border-color);
+  border-left: 6px solid var(--primary-color);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
 }
 
 .card h3 {
-  margin-bottom: 10px;
+  margin-top: 0;
   color: var(--primary-color);
 }
 
-/* Referências */
-.references ul {
-  list-style-type: square;
-  padding-left: 20px;
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 30px 0;
 }
 
-.references li {
-  margin-bottom: 10px;
-}
-
-.site-footer {
-  text-align: center;
-  border-top: 1px solid var(--border-color);
-  margin-top: 40px;
-  padding: 20px 0;
+footer {
   font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
 }

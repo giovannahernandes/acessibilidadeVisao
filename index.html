@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initicial-scale=1.0">
-<title>Como os Animais Enxergam o Mundo?</title>
-<link rel="styleheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade para a Visão: Como os Animais Enxergam o Mundo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+  <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+    <button id="toggle-contrast" aria-label="Alternar para modo de alto contraste">Alto Contraste</button>
+    <button id="increase-font" aria-label="Aumentar tamanho do texto">A+</button>
+    <button id="decrease-font" aria-label="Diminuir tamanho do texto">A-</button>
+  </div>
 
-    <header>
-        <div>
-<h1>Ciência & Acessibilidade</h1>
-<nav aria-label="Menu de Acessibilidade" class="accessibility-toolbar">
-<button id="bnt-increase-font" class="bnt-acc" aria-label="Aumentar tamanho do texto">A+</button>
-<button id="btn-decrease-font" class="btn-acc" aria-label="Diminuir tamanho do texto">A-</button>
-    <button id="btn-toggle-contrast" class="btn-acc" aria-label="Alternar Alto Contraste">Alto Contraste</button>
-      </nav>
-        </div>
-    </header>
+  <header>
+    <h1>Os Limites da Visão Humana e as Propriedades da Luz</h1>
+    <p class="subtitle">Como os Animais Enxergam o Mundo?</p>
+    <p class="authors"><strong>Autoras:</strong> Gabriela Lambert Ferreira e Giovanna Hernandes</p>
+    <p class="context">Projeto Integrador: Inteligência Artificial e Tecnologias | Física e Tecnociência</p>
+  </header>
 
-    <main id="conteudo-principal" role="main" tabIndex="-1">
-    <article class="container">
-      
-      <header class="article-header">
-        <p class="meta-info"><strong>Disciplinas:</strong> Física e Tecnociência, Programação e Robotica</p>
-        <p class="meta-info"><strong>Autoras:</strong> Gabriela Lambert Ferreira e Giovanna Hernandes</p>
-        <h1 class="article-title">COMO OS ANIMAIS ENXERGAM O MUNDO?</h1>
-      </header>
+  <main id="main-content">
+    <section aria-labelledby="intro-title">
+      <h2 id="intro-title">Introdução à Visão Animal</h2>
+      <p>A visão é um dos sentidos mais importantes para muitos seres vivos, mas ela não funciona da mesma forma em todas as espécies. Enquanto os seres humanos enxergam por meio de três tipos de células sensíveis às cores (cones), diversos animais possuem estruturas diferentes em seus olhos.</p>
+    </section>
 
-      <section class="intro">
-        <p>A visão é um dos sentidos mais importantes para muitos seres vivos, mas ela não funciona da mesma forma em todas as espécies. Enquanto os seres humanos enxergam o mundo por meio de três tipos de células sensíveis às cores, conhecidas como cones, diversos animais possuem estruturas diferentes em seus olhos, permitindo perceber cores, movimentos e até mesmo tipos de luz invisíveis para nós. Compreender como os animais enxergam é importante para entender sua sobrevivência, seus comportamentos e sua relação com o ambiente.</p>
-        <p>O estudo da visão animal faz parte de diversas áreas da ciência, como a Biologia, a Zoologia e a Neurociência. Pesquisas mostram que cada espécie desenvolveu características visuais específicas ao longo da evolução, de acordo com suas necessidades, como encontrar alimento, fugir de predadores ou localizar parceiros para reprodução. Dessa forma, conhecer essas diferenças permite compreender melhor a diversidade da vida na Terra.</p>
-        <p>A visão depende da forma como a luz é captada pelos olhos e interpretada pelo cérebro. Nos seres humanos, a retina possui bastonetes, responsáveis pela visão em ambientes com pouca luz, e cones, que permitem distinguir as cores. Entretanto, em outros animais essa estrutura pode apresentar grandes diferenças.</p>
-      </section>
+    <hr>
 
-      <section class="species-guide" aria-label="Adaptações Visuais por Espécie">
-        <h2>Adaptações Visuais em Diferentes Espécies</h2>
+    <section aria-labelledby="species-title">
+      <h2 id="species-title">Diferenças Visuais entre as Espécies</h2>
 
-        <div class="card">
-          <h3>Cães</h3>
-          <p>Os cães não enxergam apenas em preto e branco, como se acreditava antigamente. Eles conseguem perceber principalmente tons de azul e amarelo, mas têm dificuldade para diferenciar as cores vermelha e verde. Em compensação, possuem maior quantidade de bastonetes na retina, o que proporciona melhor visão em ambientes escuros e maior sensibilidade ao movimento.</p>
-        </div>
+      <article class="card">
+        <h3>Cães e Gatos</h3>
+        <p>Os cães percebem principalmente tons de <strong>azul e amarelo</strong> e possuem maior quantidade de bastonetes para enxergar no escuro. Já os gatos possuem o <em>tapetum lucidum</em>, estrutura reflexiva atrás da retina que melhora drasticamente a visão noturna.</p>
+      </article>
 
-        <div class="card">
-          <h3>Gatos</h3>
-          <p>Os gatos apresentam uma característica semelhante. Como são animais com hábitos de caça, especialmente ao amanhecer e ao entardecer, seus olhos são adaptados para captar pouca luz. Além disso, possuem uma estrutura chamada <em>tapetum lucidum</em>, localizada atrás da retina, que reflete a luz e melhora a visão noturna. É justamente essa estrutura que faz os olhos dos gatos brilharem quando iluminados à noite.</p>
-        </div>
+      <article class="card">
+        <h3>Aves de Rapina</h3>
+        <p>Águias e falcões possuem uma altíssima concentração de receptores visuais, garantindo uma acuidade visual várias vezes superior à humana para detectar presas a grandes distâncias.</p>
+      </article>
 
-        <div class="card">
-          <h3>Aves de Rapina</h3>
-          <p>As aves de rapina, como águias e falcões, possuem uma das visões mais eficientes do reino animal. Elas conseguem enxergar pequenos animais a grandes distâncias graças à alta concentração de células receptoras na retina. Sua acuidade visual pode ser várias vezes superior à dos seres humanos, permitindo localizar presas mesmo durante o voo.</p>
-        </div>
+      <article class="card">
+        <h3>Abelhas</h3>
+        <p>Conseguem enxergar a <strong>luz ultravioleta</strong>. Muitas flores possuem padrões UV invisíveis para nós, que funcionam como guiadores para localização de néctar.</p>
+      </article>
 
-        <div class="card">
-          <h3>Abelhas</h3>
-          <p>As abelhas enxergam o mundo de maneira bastante diferente. Elas conseguem perceber a luz ultravioleta, invisível para os seres humanos. Muitas flores apresentam padrões em ultravioleta que funcionam como verdadeiros "guias", indicando onde está o néctar. Dessa forma, a visão das abelhas favorece tanto sua alimentação quanto a polinização das plantas, desempenhando um papel essencial para os ecossistemas.</p>
-        </div>
+      <article class="card">
+        <h3>Serpentes</h3>
+        <p>Possuem um sistema de percepção baseado na <strong>radiação térmica (calor)</strong> emitida por outros animais, permitindo localizar presas na escuridão total.</p>
+      </article>
 
-        <div class="card">
-          <h3>Cobras</h3>
-          <p>As cobras, especialmente algumas espécies de serpentes, possuem um sistema complementar de percepção baseado no calor emitido pelos corpos dos animais. Embora essa capacidade não seja exatamente uma forma de visão convencional, ela permite localizar presas mesmo em ambientes completamente escuros. Esse mecanismo é extremamente importante para sua sobrevivência.</p>
-        </div>
+      <article class="card">
+        <h3>Camarão-louva-a-deus</h3>
+        <p>Detém um dos sistemas visuais mais complexos do reino animal, com múltiplos receptores capazes de detectar diferentes comprimentos de onda e a luz polarizada.</p>
+      </article>
+    </section>
 
-        <div class="card">
-          <h3>Camarões-louva-a-deus</h3>
-          <p>Já os camarões-louva-a-deus possuem um dos sistemas visuais mais complexos conhecidos pela ciência. Enquanto os seres humanos possuem três tipos de cones para identificar cores, esses animais apresentam um número muito maior de receptores, permitindo detectar diferentes comprimentos de onda da luz, inclusive a luz polarizada. Os cientistas ainda estudam completamente como seu cérebro interpreta todas essas informações.</p>
-        </div>
-      </section>
+    <hr>
 
-      <section class="conclusion">
-        <h2>Conclusão e Impacto Científico</h2>
-        <p>Esses exemplos demonstram que não existe uma única forma de enxergar o mundo. Cada espécie desenvolveu adaptações que aumentam suas chances de sobrevivência. A evolução favoreceu características visuais diferentes conforme o ambiente em que os animais vivem e os desafios que enfrentam diariamente.</p>
-        <p>O estudo da visão dos animais revela que o mundo pode ser percebido de maneiras muito diferentes. Enquanto algumas espécies enxergam melhor no escuro, outras distinguem cores invisíveis aos seres humanos ou identificam movimentos com extrema precisão. Essas adaptações são resultado de milhões de anos de evolução e demonstram como cada organismo desenvolveu características adequadas ao seu modo de vida.</p>
-        <p>Além de despertar curiosidade, compreender como os animais enxergam contribui para o avanço da ciência, para a conservação da biodiversidade e para o desenvolvimento de novas tecnologias inspiradas na natureza. Assim, estudar a visão animal permite ampliar nosso conhecimento sobre a diversidade dos seres vivos e sobre a complexidade das adaptações evolutivas presentes no planeta.</p>
-      </section>
-
-      <footer class="references">
-        <h2>Referências Bibliográficas</h2>
-        <ul>
-          <li>BRUSCA, Richard C.; BRUSCA, Gary J. <strong>Invertebrados</strong>. 2. ed. Rio de Janeiro: Guanabara Koogan, 2007.</li>
-          <li>CAMPBELL, Neil A. et al. <strong>Biologia</strong>. 12. ed. Porto Alegre: Artmed, 2022.</li>
-          <li>REECE, Jane B. et al. <strong>Biologia de Campbell</strong>. 10. ed. Porto Alegre: Artmed, 2015.</li>
-        </ul>
-      </footer>
-
-    </article>
+    <section aria-labelledby="evolution-title">
+      <h2 id="evolution-title">Evolução e Tecnologia</h2>
+      <p>Compreender a visão dos animais amplia o conhecimento sobre a biodiversidade e impulsiona a inovação tecnológica através da bionética e do desenvolvimento de novas ferramentas de acessibilidade.</p>
+    </section>
   </main>
 
-  <footer role="contentinfo" class="site-footer">
-    <div class="container">
-      <p>Trabalho desenvolvido para as disciplinas de Física e Tecnociência, Programação e Robotica.</p>
-    </div>
+  <footer>
+    <h3>Referências Bibliográficas</h3>
+    <ul>
+      <li>BRUSCA, Richard C.; BRUSCA, Gary J. <em>Invertebrados</em>. 2. ed. Rio de Janeiro: Guanabara Koogan, 2007.</li>
+      <li>CAMPBELL, Neil A. et al. <em>Biologia</em>. 12. ed. Porto Alegre: Artmed, 2022.</li>
+      <li>REECE, Jane B. et al. <em>Biologia de Campbell</em>. 10. ed. Porto Alegre: Artmed, 2015.</li>
+    </ul>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Script básico para dinamizar os botões de acessibilidade
+    const contrastBtn = document.getElementById('toggle-contrast');
+    contrastBtn.addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    let currentFontSize = 100;
+    document.getElementById('increase-font').addEventListener('click', () => {
+      if(currentFontSize < 140) {
+        currentFontSize += 10;
+        document.body.style.fontSize = `${currentFontSize}%`;
+      }
+    });
+
+    document.getElementById('decrease-font').addEventListener('click', () => {
+      if(currentFontSize > 80) {
+        currentFontSize -= 10;
+        document.body.style.fontSize = `${currentFontSize}%`;
+      }
+    });
+  </script>
 </body>
 </html>
